@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Jn\CustomerCar\Model\ResourceModel\Plate\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">jn_customercar_register</argument>
+            <argument name="resourceModel" xsi:type="string">Jn\CustomerCar\Model\ResourceModel\Plate</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="jn_customercar_plate_listing_data_source" xsi:type="string">Jn\CustomerCar\Model\ResourceModel\Plate\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="Jn\CustomerCar\Api\CreatePlateRegisterInterface" type="Jn\CustomerCar\Model\Api\CreatePlateRegister"/>
+    <preference for="Jn\CustomerCar\Api\UpdatePlateRegisterInterface" type="Jn\CustomerCar\Model\Api\UpdatePlateRegister"/>
+    <preference for="Jn\CustomerCar\Api\DeletePlateRegisterInterface" type="Jn\CustomerCar\Model\Api\DeletePlateRegister"/>
+    <preference for="Jn\CustomerCar\Api\GetRegisterInterface" type="Jn\CustomerCar\Model\Api\GetRegister"/>
+    <preference for="Jn\CustomerCar\Api\GetRegisterPlatesInterface" type="Jn\CustomerCar\Model\Api\GetRegisterPlates"/>
+</config>

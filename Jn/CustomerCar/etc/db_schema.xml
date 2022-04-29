@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="jn_customercar_register" resource="default" engine="innodb" comment="Customer vehicle plate table">
+        <column xsi:type="int" name="id" unsigned="false" nullable="false" identity="true" comment="Id"/>
+        <column xsi:type="text" name="customer_name" nullable="false" comment="Customer name"/>
+        <column xsi:type="text" name="customer_phone" nullable="true" comment="Customer phone"/>
+        <column xsi:type="text" name="customer_taxvat" nullable="true" comment="Taxvat"/>
+        <column xsi:type="text" name="vehicle_plate" nullable="true" comment="Vehicle Plate"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>

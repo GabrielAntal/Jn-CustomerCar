@@ -1,0 +1,14 @@
+{
+    "jn_customercar_register": {
+        "column": {
+            "id": true,
+            "customer_name": true,
+            "customer_phone": true,
+            "customer_taxvat": true,
+            "vehicle_plate": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

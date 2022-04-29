@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/customercar/cliente" method="POST">
+        <service class="Jn\CustomerCar\Api\CreatePlateRegisterInterface" method="createRegister"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    <route url="/V1/customercar/cliente/:id" method="PUT">
+        <service class="Jn\CustomerCar\Api\UpdatePlateRegisterInterface" method="updateRegister"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    <route url="/V1/customercar/cliente/:id" method="DELETE">
+        <service class="Jn\CustomerCar\Api\DeletePlateRegisterInterface" method="deleteRegister"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    <route url="/V1/customercar/cliente/:id" method="GET">
+        <service class="Jn\CustomerCar\Api\GetRegisterInterface" method="getRegisterById"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    <route url="/V1/customercar/consulta/final-placa/:number" method="GET">
+        <service class="Jn\CustomerCar\Api\GetRegisterPlatesInterface" method="getRegisterByPlate"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+</routes>
